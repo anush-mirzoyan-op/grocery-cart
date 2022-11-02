@@ -98,8 +98,8 @@ button:hover {
   margin: 48px auto;
 }
 
-#section3{
-    background-color: rgb(238, 238, 238);
+#section3 {
+  background-color: rgb(238, 238, 238);
 }
 
 .our-store {
@@ -114,27 +114,52 @@ button:hover {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
+  gap: 1rem;
 }
 
 .grid-item {
-  gap: 1rem;
-  width: 20vw;
+  /* width: 20vw; */
   height: auto;
   border-radius: 0.1rem;
+}
 
+.card {
+  width: 20vw;
 }
 
 /* [1] The container */
-.grid-container {
+.hovering-image {
   overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  width: auto;
+  height: 15vw;
+}
+
+.hovering-image > img {
+  height: 100%;
+  width: 100%;
 }
 
 /* [2] Transition property for smooth transformation of images */
-.grid-item {
-  transition: transform 2s ease;
+.hovering-image img {
+  transition: transform 1s ease;
 }
 
 /* [3] Finally, transforming the image when container gets hovered */
-.grid-item:hover {
-  transform: scale(1.5);
+.hovering-image:hover img {
+  height: min-content;
+  transform: scale(1.25);
+}
+ally,
+transforming
+  the
+  image
+  when
+  container
+  gets
+  hovered
+  */
+  .hovering-image:hover
+  img {
+  height: min-content;
+  transform: scale(1.25);
 }
