@@ -3,4 +3,7 @@
         display: grid;
         grid-template-columns: auto auto;
       }
+      .grid-item{
+        width:40vw
+      }
 }
