@@ -8,6 +8,10 @@ a {
   color: #ef7998;
 }
 
+a:hover{
+    color: black;
+}
+
 .icons {
   height: 1rem;
 }

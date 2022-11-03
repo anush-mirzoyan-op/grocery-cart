@@ -1,200 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Project</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cart Project</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    type="text/css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="media-1000px.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-1000px.css" />
+  </head>
 
-<body>
-  <nav>
-    <div style="float: left">
-      <img src="images/logo.svg" alt="" />
-    </div>
-
-    <div style="margin: 0 auto">
-      <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Store</a>
-    </div>
-    <div class="nav-items" style="float: right">
-      <div class="nav-items">
-        <img src="images/phone-disconnected.png" alt="" class="icons" style="transform: rotate(180deg)" />
-        <p>+ 123 456 789</p>
-      </div>
-      <button class="nav-items">
-        <img src="images/shopping-cart.png" alt="" class="icons" />
-        <p>2Items-$10.49</p>
-      </button>
-    </div>
-  </nav>
-
-  <div class="home">
-    <div class="welcome-home-page">
-      <h1>
-        Welcome To
-        <strong>Grandma's</strong>
-      </h1>
-      <button>EXPLORE</button>
-    </div>
-  </div>
-
-  <div class="about">
-    <div class="about-left-part">
-      <h1>About</h1>
-      <h1><strong>Us</strong></h1>
-      <p id="lorem-ipsum-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-        aliquam voluptas beatae vitae expedita consectetur nesciunt quia
-        deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro
-        at dolorum! Ad!
-      </p>
-      <button>EXPLORE</button>
-    </div>
-    <div class="about-right-part">
-      <img src="images/sweets-1.jpeg" height="auto" width="100%" alt="" />
-    </div>
-  </div>
-  <section id="section3">
-    <div class="our-store">
-      <div>
-        <h1>Our</h1>
-        <h1><strong>Store</strong></h1>
-      </div>
-      <div class="store-menu-buttons">
-        <button>ALL</button>
-        <button>CAKES</button>
-        <button>CUPKAES</button>
-        <button>SWEETS</button>
-        <button>DOUGHNUTS</button>
+  <body>
+    <nav>
+      <div style="float: left">
+        <img src="images/logo.svg" alt="" />
       </div>
 
-      <form action="">
-        <i class="fas fa-search"></i>
-        <input type="text" placeholder="item..." />
-      </form>
+      <div style="margin: 0 auto">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Store</a>
+      </div>
+      <div class="nav-items" style="float: right">
+        <div class="nav-items">
+          <img
+            src="images/phone-disconnected.png"
+            alt=""
+            class="icons"
+            style="transform: rotate(180deg)"
+          />
+          <p>+ 123 456 789</p>
+        </div>
+        <button class="nav-items">
+          <i class="fas fa-shopping-cart"></i>
+          <p>2Items-$10.49</p>
+        </button>
+      </div>
+    </nav>
 
-      <div class="grid-container">
-        <div class="card">
-          <div class="hovering-image">
-            <img src="grid-sweets/sweets-1.jpeg" alt="" />
-          </div>
-          <div class="sweet-item-price" >
-            <h5>Sweet Item</h5>
-            <strong> $5</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div class="hovering-image">
-            <img src="grid-sweets/sweets-2.jpeg" alt="" />
-          </div>
-          <div class="sweet-item-price" >
-            <h5>Cupcake Item</h5>
-             <strong>$5</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div class="hovering-image">
-            <img src="grid-sweets/sweets-3.jpeg" alt="" />
-          </div>
-          <div class="sweet-item-price" > 
-            <h5>Cake Item</h5>
-             <strong>$5</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div class="hovering-image">
-            <img src="grid-sweets/sweets-4.jpeg" alt="" />
-          </div>
-          <div class="sweet-item-price" >
-            <h5>Dougnut Item</h5>
-             <strong>$5</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div class="hovering-image">
-            <img src="grid-sweets/sweets-5.jpeg" alt="" />
-          </div>
-          <div class="sweet-item-price" >
-            <h5>Sweet Item</h5>
-             <strong>$10</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div class="hovering-image">
-            <img src="grid-sweets/sweets-6.jpeg" alt="" />
-          </div>
-          <div class="sweet-item-price" >
-            <h5>Cupcake Item</h5>
-             <strong>$10</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div class="hovering-image">
-            <img src="grid-sweets/sweets-7.jpeg" alt="" srcset="" />
-          </div>
-          <div class="sweet-item-price" >
-            <h5>Cake Item</h5>
-             <strong>$10</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div class="hovering-image">
-            <img src="grid-sweets/sweets-8.jpeg" alt="" />
-          </div>
-          <div class="sweet-item-price" >
-            <h5>Dougnut Item</h5>
-             <strong>$10</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div class="hovering-image">
-            <img src="grid-sweets/sweets-9.jpeg" alt="" />
-          </div>
-          <div class="sweet-item-price" >
-            <h5>Sweet Item</h5>
-             <strong>$15</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div class="hovering-image">
-          <img src="grid-sweets/sweets-10.jpeg" alt="" srcset="" />
-        </div>
-        
-        <div class="sweet-item-price" >
-          <h5>Cupcake Item</h5>
-           <strong>$15</strong>
-        </div>
-      </div>
-      <div class="card">
-        <div class="hovering-image">
-          <img src="grid-sweets/sweets-11.jpeg" alt="" />
-        </div>
-        <div class="sweet-item-price" >
-          <h5>Cake Item</h5>
-           <strong>$15</strong>
-        </div>
-      </div>
-      <div class="card">
-        <div class="hovering-image">
-          <img src="grid-sweets/sweets-12.jpeg" alt="" />
-        </div>
-        <div class="sweet-item-price" >
-          <h5>Dougnut Item</h5>
-           <strong>$15</strong>
-        </div>
+    <div class="home">
+      <div class="welcome-home-page">
+        <h1>
+          Welcome To
+          <strong>Grandma's</strong>
+        </h1>
+        <button>EXPLORE</button>
       </div>
     </div>
-    <div></div>
-    </div>
-  </section>
-  <script src="script.js"></script>
-</body>
 
+    <div class="about">
+      <div class="about-left-part">
+        <h1>About</h1>
+        <h1><strong>Us</strong></h1>
+        <p id="lorem-ipsum-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+          aliquam voluptas beatae vitae expedita consectetur nesciunt quia
+          deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro
+          at dolorum! Ad!
+        </p>
+        <button>EXPLORE</button>
+      </div>
+      <div class="about-right-part">
+        <img src="images/sweets-1.jpeg" height="auto" width="100%" alt="" />
+      </div>
+    </div>
+    <section id="section3">
+      <div class="our-store">
+        <div>
+          <h1>Our</h1>
+          <h1><strong>Store</strong></h1>
+        </div>
+        <div class="store-menu-buttons">
+          <button>ALL</button>
+          <button>CAKES</button>
+          <button>CUPKAES</button>
+          <button>SWEETS</button>
+          <button>DOUGHNUTS</button>
+        </div>
+
+        <form action="">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="item..." />
+        </form>
+
+        <div class="grid-container">
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-1.jpeg" alt="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Sweet Item</h5>
+              <strong> $5</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-2.jpeg" alt="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Cupcake Item</h5>
+              <strong>$5</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-3.jpeg" alt="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Cake Item</h5>
+              <strong>$5</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-4.jpeg" alt="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Dougnut Item</h5>
+              <strong>$5</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-5.jpeg" alt="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Sweet Item</h5>
+              <strong>$10</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-6.jpeg" alt="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Cupcake Item</h5>
+              <strong>$10</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-7.jpeg" alt="" srcset="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Cake Item</h5>
+              <strong>$10</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-8.jpeg" alt="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Dougnut Item</h5>
+              <strong>$10</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-9.jpeg" alt="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Sweet Item</h5>
+              <strong>$15</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-10.jpeg" alt="" srcset="" />
+            </div>
+
+            <div class="sweet-item-price">
+              <h5>Cupcake Item</h5>
+              <strong>$15</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-11.jpeg" alt="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Cake Item</h5>
+              <strong>$15</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-12.jpeg" alt="" />
+            </div>
+            <div class="sweet-item-price">
+              <h5>Dougnut Item</h5>
+              <strong>$15</strong>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
