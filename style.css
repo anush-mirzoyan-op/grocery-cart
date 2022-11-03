@@ -91,7 +91,7 @@ button:hover {
   text-align: left;
 }
 
-.about-right-part {
+.about-right-part { 
   width: 50%;
   height: fit-content;
   border: 0.5rem solid #f9e494;
@@ -111,6 +111,16 @@ button:hover {
   background-color: rgb(238, 238, 238);
 }
 
+.store-menu-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -123,7 +133,16 @@ button:hover {
   border-radius: 0.1rem;
 }
 
+.sweet-item-price{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.sweet-item-price{}
+
 .card {
+  background-color: white;
   width: 20vw;
 }
 
