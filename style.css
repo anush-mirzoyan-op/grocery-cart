@@ -10,6 +10,7 @@ a {
 
 a:hover{
     color: black;
+    transition: color 0.5s ease ;
 }
 
 .icons {
@@ -72,7 +73,7 @@ button:hover {
   display: flex;
   align-items: center;
   width: 60vw;
-  height: 60vh;
+  height: 50%;
   display: flex;
   flex-direction: row;
   margin: auto;
