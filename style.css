@@ -8,9 +8,9 @@ a {
   color: #ef7998;
 }
 
-a:hover{
-    color: black;
-    transition: color 0.5s ease ;
+a:hover {
+  color: black;
+  transition: color 0.5s ease;
 }
 
 .icons {
@@ -96,7 +96,7 @@ button:hover {
   text-align: left;
 }
 
-.about-right-part { 
+.about-right-part {
   width: 50%;
   height: fit-content;
   border: 0.5rem solid #f9e494;
@@ -108,23 +108,53 @@ button:hover {
 }
 
 .our-store {
+  text-align: center;
   width: 60vw;
   margin: auto;
   display: flex;
   flex-direction: column;
+  gap: 30px;
   justify-content: center;
   background-color: rgb(238, 238, 238);
 }
 
-.store-menu-buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+.store-menu-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
+
+form {
+  margin: auto;
+  border: 1px solid #eee;
+  display: flex;
+  width: fit-content;
+}
+
+form > i {
+  background-color: #ef7998;
+  padding: 4px;
+  height: 100%;
+  border-radius: 0.1rem 0 0 0.1rem;
+}
+
+input {
+  margin: 0;
+  padding: 0 0.25rem;
+  border: none;
+  height: 24px;
+  width: 30vw;
+  border-radius: 0 0.1rem 0.1rem 0;
+}
+input:focus {
+    border: none;
+    outline: none;
+  }
+  
 
 .grid-container {
   display: grid;
@@ -138,13 +168,14 @@ button:hover {
   border-radius: 0.1rem;
 }
 
-.sweet-item-price{
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
+.sweet-item-price {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
-.sweet-item-price{}
+.sweet-item-price {
+}
 
 .card {
   background-color: white;
