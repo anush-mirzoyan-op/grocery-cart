@@ -225,13 +225,6 @@ input:focus {
   bottom: -5%;
 }
 
-.card-shopping-icon:hover {
-  right: 0;
-  bottom: 0;
-  z-index: 5;
-  background-color: rgb(249, 228, 148);
-}
-
 /* [1] The container */
 .hovering-image {
   overflow: hidden; /* [1.2] Hide the overflowing of child elements */
@@ -255,7 +248,16 @@ input:focus {
   height: min-content;
   transform: scale(1.25);
 }
-ally,
+.hovering-image:hover .card-shopping-icon {
+  padding: 0.75rem;
+  border-radius: 0.5rem 0 0 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: rgb(249, 228, 148);
+  transition: all 0.5s ease-in-out;
+}
+/* ally,
 transforming
   the
   image
@@ -263,9 +265,8 @@ transforming
   container
   gets
   hovered
-  */
   .hovering-image:hover
   img {
   height: min-content;
   transform: scale(1.25);
-}
+} */
