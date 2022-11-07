@@ -48,10 +48,12 @@
       <div class="welcome-home-page">
         <h1>
           Welcome To
-          <strong class="pink-text" style="font-weight: 900; font-size: 5rem;">Grandma's</strong>
+          <strong class="pink-text" style="font-weight: 900; font-size: 5rem"
+            >Grandma's</strong
+          >
         </h1>
 
-        <button class="buttons" style="border: 0.2rem solid;">EXPLORE</button>
+        <button class="buttons" style="border: 0.2rem solid">EXPLORE</button>
       </div>
     </div>
 
@@ -67,7 +69,6 @@
         <button class="buttons">EXPLORE</button>
       </div>
       <div class="about-right-part">
-        
         <img src="images/sweets-1.jpeg" height="auto" width="100%" alt="" />
       </div>
     </div>
@@ -75,11 +76,21 @@
       <div class="our-store">
         <h1>Our <strong class="pink-text">Store</strong></h1>
         <div class="store-menu-buttons">
-          <button class="buttons">ALL</button>
-          <button class="buttons">CAKES</button>
-          <button class="buttons">CUPKAES</button>
-          <button class="buttons">SWEETS</button>
-          <button class="buttons">DOUGHNUTS</button>
+          <button class="buttons" onclick="renderStoreData('All')()">
+            ALL
+          </button>
+          <button class="buttons" onclick="renderStoreData('Cakes')()">
+            CAKES
+          </button>
+          <button class="buttons" onclick="renderStoreData('Cupcakes')()">
+            CUPKAES
+          </button>
+          <button class="buttons" onclick="renderStoreData('Sweets')()">
+            SWEETS
+          </button>
+          <button class="buttons" onclick="renderStoreData('Dougnut')()">
+            DOUGNUTS
+          </button>
         </div>
 
         <form action="">
@@ -87,7 +98,7 @@
           <input type="text" placeholder="item..." />
         </form>
 
-        <div class="grid-container">
+        <!-- <div class="grid-container">
           <div class="card">
             <div class="hovering-image">
               <img src="grid-sweets/sweets-1.jpeg" alt="" />
@@ -209,8 +220,7 @@
               <strong>$15</strong>
             </div>
           </div>
-        </div>
-        <div></div>
+        </div> -->
       </div>
     </section>
     <script src="script.js"></script>

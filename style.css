@@ -264,6 +264,7 @@ input:focus {
   z-index: 5;
   background-color: rgb(249, 228, 148);
   transition: all 0.5s ease-in-out;
+  transform: translate(0, 0);
 }
 
 
