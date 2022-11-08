@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     type: "Sweet",
     imageLink: "grid-sweets/sweets-1.jpeg",
@@ -72,3 +72,5 @@ export const data = [
     candyPrice: "$15",
   },
 ];
+
+export {data}

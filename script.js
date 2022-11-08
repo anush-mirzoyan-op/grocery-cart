@@ -1,8 +1,12 @@
-import { data } from "./data";
+window.onload = () => {
+  console.log('loadded');
+}
+
+import {data} from "./data.js";
 
 console.log(data);
 
-function createCard({ imageLink, candyName, cndyPrice: price }) {
+window.createCard = ({ imageLink, candyName: name, cndyPrice: price })=> {
   const card = document.createElement("div");
   card.classList.add("card");
 
@@ -24,22 +28,21 @@ function createCard({ imageLink, candyName, cndyPrice: price }) {
   card.appendChild(priceContainer);
 
   let candyName = document.createElement("h5");
-  candyName.innerHTML = candyName;
+  candyName.innerHTML = name;
   priceContainer.appendChild(candyName);
 
   let candyPrice = document.createElement("strong");
   candyPrice.innerHTML = price;
   priceContainer.appendChild(candyPrice);
+  document.querySelector('#grid-container').appendChild(card)
 }
 
-function renderStoreData(type) {
-  //   if (type === "All") {
-  //     data.map((item) => createCard(item));
-  //   }
-
+window.renderStoreData = (type)=> {
+  document.querySelector('#grid-container').innerHTML = ''
   data.map((item) => {
     if (type == "All" || item.type == type) {
-      createCard(item)();
+      createCard(item);
+      console.log('create card');
     }
   });
 }

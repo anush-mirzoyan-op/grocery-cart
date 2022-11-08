@@ -76,19 +76,19 @@
       <div class="our-store">
         <h1>Our <strong class="pink-text">Store</strong></h1>
         <div class="store-menu-buttons">
-          <button class="buttons" onclick="renderStoreData('All')()">
+          <button class="buttons" id="" onclick="renderStoreData('All')">
             ALL
           </button>
-          <button class="buttons" onclick="renderStoreData('Cakes')()">
+          <button class="buttons" onclick="renderStoreData('Cake')">
             CAKES
           </button>
-          <button class="buttons" onclick="renderStoreData('Cupcakes')()">
+          <button class="buttons" onclick="renderStoreData('Cupcake')">
             CUPKAES
           </button>
-          <button class="buttons" onclick="renderStoreData('Sweets')()">
+          <button class="buttons" onclick="renderStoreData('Sweet')">
             SWEETS
           </button>
-          <button class="buttons" onclick="renderStoreData('Dougnut')()">
+          <button class="buttons" onclick="renderStoreData('Dougnut')">
             DOUGNUTS
           </button>
         </div>
@@ -98,6 +98,8 @@
           <input type="text" placeholder="item..." />
         </form>
 
+        <div id="grid-container">
+          </div>
         <!-- <div class="grid-container">
           <div class="card">
             <div class="hovering-image">
@@ -223,6 +225,6 @@
         </div> -->
       </div>
     </section>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>

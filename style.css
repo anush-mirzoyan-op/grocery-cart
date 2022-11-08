@@ -205,7 +205,7 @@ input:focus {
   outline: none;
 }
 
-.grid-container {
+#grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 1rem;
