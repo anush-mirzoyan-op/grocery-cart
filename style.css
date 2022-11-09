@@ -267,7 +267,6 @@ input:focus {
   transform: translate(0, 0);
 }
 
-
 /* ally,
 transforming
   the
@@ -281,3 +280,33 @@ transforming
   height: min-content;
   transform: scale(1.25);
 } */
+
+/* .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  max-width: 240px;
+  max-height: 266px;
+  z-index: 1;
+} */
+
+/* /* after click */
+.dropdown-content {
+  display: grid;
+  position: absolute;
+  grid-template-rows: auto;
+  background-color: #f9f9f9;
+  max-width: 240px;
+  max-height: 266px;
+  z-index: 1;
+} 
+
+․dropdownItem{
+  
+}
+
+.dropdownItem img{
+  border-radius: 50% !important;
+  width: 50px;
+  height: 50px;
+}
