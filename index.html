@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Project</title>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-1000px.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div style="float: left">
+        <img src="images/logo.svg" alt="" />
+      </div>
+
+      <div style="margin: 0 auto">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Store</a>
+      </div>
+      <div class="nav-items" style="float: right">
+        <div class="nav-items">
+          <img
+            src="images/phone-disconnected.png"
+            alt=""
+            class="icons"
+            style="transform: rotate(180deg)"
+          />
+          <p>+ 123 456 789</p>
+        </div>
+        <button class="nav-items buy-button">
+          <i class="fas fa-shopping-cart"></i>
+          <p>2Items - $ <section id="cartBalance">10.49</section></p>
+        </button>
+      </div>
+    </nav>
+
+    <div class="home">
+      <div class="welcome-home-page">
+        <h1>
+          Welcome To
+          <strong class="pink-text" style="font-weight: 900; font-size: 5rem"
+            >Grandma's</strong
+          >
+        </h1>
+
+        <button class="buttons" style="border: 0.2rem solid">EXPLORE</button>
+      </div>
+    </div>
+
+    <div class="about">
+      <div class="about-left-part">
+        <h1>About <strong class="pink-text">Us</strong></h1>
+        <p id="lorem-ipsum-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+          aliquam voluptas beatae vitae expedita consectetur nesciunt quia
+          deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro
+          at dolorum! Ad!
+        </p>
+        <button class="buttons">EXPLORE</button>
+      </div>
+      <div class="about-right-part">
+        <img src="images/sweets-1.jpeg" height="auto" width="100%" alt="" />
+      </div>
+    </div>
+    <section id="section3">
+      <div class="our-store">
+        <h1>Our <strong class="pink-text">Store</strong></h1>
+        <div class="store-menu-buttons">
+          <button class="buttons" id="" onclick="renderStoreData('All')">
+            ALL
+          </button>
+          <button class="buttons" onclick="renderStoreData('Cake')">
+            CAKES
+          </button>
+          <button class="buttons" onclick="renderStoreData('Cupcake')">
+            CUPKAES
+          </button>
+          <button class="buttons" onclick="renderStoreData('Sweet')">
+            SWEETS
+          </button>
+          <button class="buttons" onclick="renderStoreData('Dougnut')">
+            DOUGNUTS
+          </button>
+        </div>
+
+        <form action="">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="item..." />
+        </form>
+
+        <div id="grid-container">
+          </div>
+        <!-- <div class="grid-container">
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-1.jpeg" alt="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Sweet Item</h5>
+              <strong> $5</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-2.jpeg" alt="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Cupcake Item</h5>
+              <strong>$5</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-3.jpeg" alt="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Cake Item</h5>
+              <strong>$5</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-4.jpeg" alt="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Dougnut Item</h5>
+              <strong>$5</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-5.jpeg" alt="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Sweet Item</h5>
+              <strong>$10</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-6.jpeg" alt="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Cupcake Item</h5>
+              <strong>$10</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-7.jpeg" alt="" srcset="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Cake Item</h5>
+              <strong>$10</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-8.jpeg" alt="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Dougnut Item</h5>
+              <strong>$10</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-9.jpeg" alt="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Sweet Item</h5>
+              <strong>$15</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-10.jpeg" alt="" srcset="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+
+            <div class="sweet-item-price">
+              <h5>Cupcake Item</h5>
+              <strong>$15</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-11.jpeg" alt="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Cake Item</h5>
+              <strong>$15</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="hovering-image">
+              <img src="grid-sweets/sweets-12.jpeg" alt="" />
+              <i class="fas fa-shopping-cart card-shopping-icon"></i>
+            </div>
+            <div class="sweet-item-price">
+              <h5>Dougnut Item</h5>
+              <strong>$15</strong>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
