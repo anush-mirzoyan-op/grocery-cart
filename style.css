@@ -302,3 +302,9 @@ input:focus {
 .delete-icon:hover{
   cursor: pointer;
 }
+
+.total-price{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}

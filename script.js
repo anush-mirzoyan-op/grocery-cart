@@ -49,8 +49,12 @@ window.renderStoreData = (type) => {
   });
 };
 
+const totalPrice = document.createElement("div");
+totalPrice.classList.add("total-price")
+
 window.addToCartandDropdown = (val, imagelink) => {
   const dropdownItems = document.createElement("div");
+  cartBalance.innerHTML = (+cartBalance.innerHTML + val).toFixed(2);
 
   const imageDiv = document.createElement("div");
   imageDiv.innerHTML = `<img src = ${imagelink}>`;
@@ -59,22 +63,24 @@ window.addToCartandDropdown = (val, imagelink) => {
   priceDiv.innerHTML = `Cart item $ ${val}`;
 
   const deleteIcon = document.createElement("i");
-  deleteIcon.classList.add("fas", "fa-trash" , "delete-icon");
+  deleteIcon.classList.add("fas", "fa-trash", "delete-icon");
 
-  dropdownItems.appendChild(imageDiv)
-  dropdownItems.appendChild(priceDiv)
-  dropdownItems.appendChild(deleteIcon)
+  dropdownItems.appendChild(imageDiv);
+  dropdownItems.appendChild(priceDiv);
+  dropdownItems.appendChild(deleteIcon);
 
-  console.log("added to dropdown item")
+
+  totalPrice.innerText = "";
+
+  totalPrice.innerHTML += "Total" +"$"+ cartBalance.innerHTML;
 
   // add items at the begining of the list
   // insertBefore --- prepend
 
   dropdownItems.classList.add("dropdownItem");
   dropDown.prepend(dropdownItems);
-  cartBalance.innerHTML = (+cartBalance.innerHTML + val).toFixed(2);
+  dropDown.appendChild(totalPrice);
 };
-
 
 //սարքում ենք սկզբի համար էդ Dropdown-ը ու կպցնում ենք nav-bar-ին
 window.createDropdown = () => {
