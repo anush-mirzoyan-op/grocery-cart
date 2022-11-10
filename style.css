@@ -267,46 +267,38 @@ input:focus {
   transform: translate(0, 0);
 }
 
-/* ally,
-transforming
-  the
-  image
-  when
-  container
-  gets
-  hovered
-  .hovering-image:hover
-  img {
-  height: min-content;
-  transform: scale(1.25);
-} */
-
-/* .dropdown-content {
+.dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  max-width: 240px;
-  max-height: 266px;
-  z-index: 1;
-} */
-
-/* /* after click */
-.dropdown-content {
-  display: grid;
-  position: absolute;
   grid-template-rows: auto;
+  gap: 0.5rem;
   background-color: #f9f9f9;
   max-width: 240px;
   max-height: 266px;
   z-index: 1;
-} 
-
-․dropdownItem{
-  
+  right: 0;
+  top: 4.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.5);
 }
 
-.dropdownItem img{
+#nav-bar {
+  position: relative;
+}
+
+.dropdownItem{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  align-items: center;
+}
+ 
+.dropdownItem img {
   border-radius: 50% !important;
   width: 50px;
   height: 50px;
+}
+
+.delete-icon:hover{
+  cursor: pointer;
 }

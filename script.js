@@ -2,9 +2,8 @@ import { data } from "./data.js";
 
 let cartBalance = document.getElementById("cartBalance");
 let balanceButton = document.getElementById("openDropdown");
-
-
-balanceButton.addEventListener("click", () => createDropdown());
+let state = false;
+const dropDown = document.createElement("div");
 
 window.createCard = ({ imageLink, candyName: name, price }) => {
   const card = document.createElement("div");
@@ -22,7 +21,9 @@ window.createCard = ({ imageLink, candyName: name, price }) => {
   const shoppingIcon = document.createElement("i");
   shoppingIcon.classList.add("fas", "fa-shopping-cart", "card-shopping-icon");
   hoveringImage.appendChild(shoppingIcon);
-  shoppingIcon.addEventListener("click", () => addToCartandDropdown(price ,imageLink)); //ֆունկցիային տալիս ենք նաև նկարի լինքը որ միանգամից դռոփդաունի մեջ նկարի
+  shoppingIcon.addEventListener("click", () =>
+    addToCartandDropdown(price, imageLink)
+  ); //ֆունկցիային տալիս ենք նաև նկարի լինքը որ միանգամից դռոփդաունի մեջ նկարի
 
   let priceContainer = document.createElement("div");
   priceContainer.classList.add("sweet-item-price");
@@ -48,26 +49,49 @@ window.renderStoreData = (type) => {
   });
 };
 
-const dropDown = document.createElement('div')
-dropDown.classList.add(".dropdown-content");
+window.addToCartandDropdown = (val, imagelink) => {
+  const dropdownItems = document.createElement("div");
 
-document.querySelector("#openDropdown").appendChild(dropDown);
+  const imageDiv = document.createElement("div");
+  imageDiv.innerHTML = `<img src = ${imagelink}>`;
 
+  const priceDiv = document.createElement("div");
+  priceDiv.innerHTML = `Cart item $ ${val}`;
 
-window.addToCartandDropdown = (val , imagelink) => {
-  console.log(cartBalance.innerHTML);
-  console.log(val);
-  console.log(imagelink);
+  const deleteIcon = document.createElement("i");
+  deleteIcon.classList.add("fas", "fa-trash" , "delete-icon");
 
-  const dropdownItems = document.createElement('div')
-  dropdownItems.innerHTML = `<img src = ${imagelink}>`
-  dropdownItems.classList.add("dropdownItem")
-  dropDown.appendChild(dropdownItems)
+  dropdownItems.appendChild(imageDiv)
+  dropdownItems.appendChild(priceDiv)
+  dropdownItems.appendChild(deleteIcon)
+
+  console.log("added to dropdown item")
+
+  // add items at the begining of the list
+  // insertBefore --- prepend
+
+  dropdownItems.classList.add("dropdownItem");
+  dropDown.prepend(dropdownItems);
   cartBalance.innerHTML = (+cartBalance.innerHTML + val).toFixed(2);
 };
 
 
 //սարքում ենք սկզբի համար էդ Dropdown-ը ու կպցնում ենք nav-bar-ին
 window.createDropdown = () => {
-  console.log("created")
+  console.log("created");
+
+  dropDown.classList.add("dropdown-content");
+
+  document.querySelector("#nav-bar").appendChild(dropDown);
 };
+
+window.addEventListener("load", createDropdown);
+
+balanceButton.addEventListener("click", () => {
+  if (!state) {
+    dropDown.style.display = "grid";
+  } else {
+    dropDown.style.display = "none";
+  }
+  state = !state;
+});
