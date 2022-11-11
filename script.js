@@ -50,11 +50,12 @@ window.renderStoreData = (type) => {
 };
 
 const totalPrice = document.createElement("div");
-totalPrice.classList.add("total-price")
+totalPrice.classList.add("total-price");
 
 window.addToCartandDropdown = (val, imagelink) => {
   const dropdownItems = document.createElement("div");
-  cartBalance.innerHTML = (+cartBalance.innerHTML + val).toFixed(2);
+  let cartBalanceValue = (+cartBalance.innerHTML + val).toFixed(2);
+  cartBalance.innerHTML = cartBalanceValue;
 
   const imageDiv = document.createElement("div");
   imageDiv.innerHTML = `<img src = ${imagelink}>`;
@@ -68,11 +69,16 @@ window.addToCartandDropdown = (val, imagelink) => {
   dropdownItems.appendChild(imageDiv);
   dropdownItems.appendChild(priceDiv);
   dropdownItems.appendChild(deleteIcon);
+  deleteIcon.addEventListener("click", () => {
+    dropdownItems.remove(dropdownItems);
+    cartBalance.innerHTML = (cartBalanceValue - val).toFixed(2);
+    totalPrice.innerText = "Total $ " + cartBalance.innerHTML;
 
+  });
 
   totalPrice.innerText = "";
 
-  totalPrice.innerHTML += "Total" +"$"+ cartBalance.innerHTML;
+  totalPrice.innerHTML += "Total" + "$" + cartBalance.innerHTML;
 
   // add items at the begining of the list
   // insertBefore --- prepend
